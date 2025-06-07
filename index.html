@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>red</title>
+  <style>
+    body {
+      background: #0f0f0f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    .blur-text {
+      font-size: 3rem;
+      color: white;
+      transition: filter 1s, opacity 1s;
+      filter: blur(8px);
+      opacity: 0.4;
+    }
+
+    .blur-text.focused {
+      filter: blur(0px);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div id="text" class="blur-text">Hello, GitHub Pages!</div>
+
+  <script>
+    // JavaScript to animate blur
+    const text = document.getElementById('text');
+
+    let focused = false;
+
+    setInterval(() => {
+      focused = !focused;
+      if (focused) {
+        text.classList.add('focused');
+      } else {
+        text.classList.remove('focused');
+      }
+    }, 2000); // toggles every 2 seconds
+  </script>
+</body>
+</html>
