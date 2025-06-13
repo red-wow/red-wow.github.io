@@ -126,7 +126,7 @@ idk bitches how to code slay?
       };
 
       try {
-        const res = await fetch('YOUR_DISCORD_WEBHOOK_URL', {
+        const res = await fetch('${{ secrets.DISCORD_WEBHOOK }}', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
