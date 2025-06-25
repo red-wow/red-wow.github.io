@@ -1,16 +1,80 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Red Donations</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #2c0f0f, #1a0000);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
 
-    <meta property="og:title" content="Red Donations">
-    <meta property="og:url" content="https://www.roblox.com/games/127973995479869/l#!/store">
-    <meta property="og:type" content="website">
-    <meta name="theme-color" content="#ff5757">
-    
-    <meta http-equiv="refresh" content="0; url=https://www.roblox.com/games/127973995479869/hi#!/store" />
-    <title>Redirecting...</title>
-  </head>
-  <body>
-    <p>If you're not redirected, <a href="https://www.roblox.com/games/127973995479869/DONATIONS#!/store">click here</a>.</p>
-  </body>
+    .container {
+      text-align: center;
+      max-width: 600px;
+      padding: 20px;
+    }
+
+    .icon {
+      font-size: 80px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 20px 0 10px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #e0e0e0;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 30px;
+      background-color: #e11d48;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #be123c;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      .icon {
+        font-size: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="icon">🤑</div>
+    <h1>Red Donations</h1>
+    <p>This is the place to donate some Robux to help me.</p>
+    <a href="https://www.roblox.com/games/127973995479869/Red-Donations#!/store" class="btn">Donate</a>
+  </div>
+</body>
 </html>
