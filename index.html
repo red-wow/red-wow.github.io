@@ -1,7 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <body>
-    <meta http-equiv="refresh" content="0; url=https://guns.lol/red.bio" />
-  </body>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Red/title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #8b1c1c;
+      color: #f5e9ea;
+      line-height: 1.6;
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .logo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .gif {
+      width: 200px;
+      margin: 20px 0;
+      border-radius: 12px;
+    }
+
+    h1, h2 {
+      color: #fdf6f7;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-top: 60px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .line {
+      width: 60px;
+      height: 3px;
+      background-color: #f5e9ea;
+      margin: 0 auto 30px auto;
+      border-radius: 4px;
+    }
+
+    .social-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      padding: 0 20px;
+    }
+
+    .social-card {
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      transition: background 0.3s;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .social-card:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .social-icon {
+      font-size: 32px;
+    }
+
+    .social-info {
+      line-height: 1.4;
+    }
+
+    .social-title {
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .social-desc {
+      font-size: 0.95rem;
+      color: #f7d9dc;
+    }
+
+    .paragraph {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+      color: #f1d0d2;
+    }
+
+    @media (max-width: 600px) {
+      .social-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Intro Section -->
+  <div class="section center">
+    <img src="https://red-wow.github.io/i/WANEGBT.gif" alt="Logo" class="logo" />
+    <img src="/WANEGBT.gif" alt="Animated" class="gif" />
+    <h1>red</h1>
+    <p>👋 Welcome to my brand new user page, replacing my guns.lol!</p>
+  </div>
+
+  <!-- Socials Section -->
+  <div class="section">
+    <h2>Socials</h2>
+    <div class="line"></div>
+    <div class="social-grid">
+      <a href="https://red-wow.github.io/social/github" class="social-card" target="_blank">
+        <div class="social-icon"></div>
+        <div class="social-info">
+          <div class="social-title">Github</div>
+          <div class="social-desc">Find some of my coding and scripts here.</div>
+        </div>
+      </a>
+      <a href="https://red-wow.github.io/social/roblox" class="social-card" target="_blank">
+        <div class="social-icon">🕹️</div>
+        <div class="social-info">
+          <div class="social-title">Roblox</div>
+          <div class="social-desc">View my Roblox User page and my badges.</div>
+        </div>
+      </a>
+      <a href="https://red-wow.github.io/donations" class="social-card" target="_blank">
+        <div class="social-icon">💸</div>
+        <div class="social-info">
+          <div class="social-title">Donations</div>
+          <div class="social-desc">Donate to me to support me for longer.</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- More About Me Section -->
+  <div class="section">
+    <h2>More about me</h2>
+    <div class="line"></div>
+    <p class="paragraph">
+      Honestly... this section is still in the works. You beaten me to it!
+    </p>
+  </div>
+
+</body>
 </html>
