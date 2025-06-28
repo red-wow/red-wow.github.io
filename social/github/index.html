@@ -1,10 +1,88 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="refresh" content="0; url=https://github.com/red-wow" />
-    <title>Redirecting...</title>
-  </head>
-  <body>
-    <p>If you're not redirected, <a href="https://github.com/red-wow">click here</a>.</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Red's Roblox | Redirecting...</title>
+
+  <!-- Meta redirect fallback after 3 seconds -->
+  <meta http-equiv="refresh" content="3; url=https://example.com">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 600px;
+      padding: 20px;
+    }
+
+    .spinner {
+      width: 60px;
+      height: 60px;
+      border: 6px solid rgba(255, 255, 255, 0.2);
+      border-top-color: #6366f1;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 30px;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    a {
+      color: #8ab4f8;
+      text-decoration: underline;
+      font-weight: 500;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .spinner {
+        width: 40px;
+        height: 40px;
+        border-width: 4px;
+      }
+    }
+  </style>
+
+  <script>
+    // Auto-redirect after 3 seconds
+    setTimeout(() => {
+      window.location.href = "https://github.com/red-wow"; // change to your target URL
+    }, 1);
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="spinner"></div>
+    <h1>Redirecting...</h1>
+    <p>Please wait while we take you to your destination.</p>
+    <p>If you're not redirected automatically, <a href="https://github.com/red-wow">click here</a>.</p>
+  </div>
+</body>
 </html>
