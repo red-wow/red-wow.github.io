@@ -37,7 +37,9 @@
   </style>
 </head>
 <body>
-  <h1>Continents Awake Status<br><small><small><small>This works out the average time over a continent</small></small></small></h1>
+  <h1>Continents Awake Status<br>
+    <small><small><small>This works out the average time over a continent</small></small></small>
+  </h1>
   <div class="continent" id="your-info"></div>
   <div id="continents"></div>
 
@@ -61,7 +63,12 @@
       const entries = [];
       const now = new Date();
       const userTz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-      const userTime = now.toLocaleTimeString("en-US", { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
+      const userTime = now.toLocaleTimeString("en-US", {
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false
+      });
 
       yourInfo.innerHTML = `<strong>Your Info</strong><br>Time: ${userTime}<br>Time Zone: ${userTz}`;
 
@@ -79,23 +86,33 @@
 
         const avgHour = Math.round(totalHours / times.length);
         const refTime = times[0].date;
-        const refTz = times[0].tz.split('/').pop();
         const minutes = String(refTime.getMinutes()).padStart(2, '0');
         const seconds = String(refTime.getSeconds()).padStart(2, '0');
         const avgTime = `${String(avgHour).padStart(2, '0')}:${minutes}:${seconds}`;
         const status = isAwake(avgHour) ? 'awake' : 'asleep';
 
-        entries.push({ continent, time: avgTime, status, tzLink: refTz });
+        entries.push({
+          continent,
+          time: avgTime,
+          status
+        });
       }
 
-      entries.sort((a, b) => a.status === 'asleep' && b.status === 'awake' ? 1 : a.status === 'awake' && b.status === 'asleep' ? -1 : 0);
+      entries.sort((a, b) => {
+        if (a.status === 'awake' && b.status === 'asleep') return -1;
+        if (a.status === 'asleep' && b.status === 'awake') return 1;
+        return 0;
+      });
 
       continentContainer.innerHTML = '';
       for (const entry of entries) {
         const div = document.createElement('div');
         div.className = 'continent';
         div.innerHTML = `<strong>${entry.continent}</strong><br>Time: ${entry.time}<br>Status: <span class="${entry.status}">${entry.status.toUpperCase()}</span>`;
-        div.onclick = () => window.open(`https://time.is/${entry.tzLink}`, '_blank');
+        div.onclick = () => {
+          const slug = entry.continent.replace(/\\s+/g, '-').toLowerCase();
+          window.location.href = `/continents-time/${slug}`;
+        };
         continentContainer.appendChild(div);
       }
     };
@@ -105,5 +122,4 @@
   </script>
 </body>
 </html>
-
 
