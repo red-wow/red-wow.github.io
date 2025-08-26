@@ -22,6 +22,7 @@
   <style>
     body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; line-height:1.7; padding: 0; margin: 0; color: #111; background: #fff; }
     .banner { background: #c62828; color: #fff; text-align: center; padding: 12px 16px; font-weight: bold; font-size: 1.1em; position: sticky; top: 0; z-index: 1000; }
+
     main { padding: 24px; max-width: 900px; margin: auto; }
     h1, h2, h3, h4 { color: #103a63; margin-top: 1.4em; }
     p { margin: 0.6em 0; }
@@ -29,6 +30,29 @@
     blockquote { border-left: 4px solid #ddd; padding-left: 14px; margin: 14px 0; color: #444; background: #fafafa; }
     hr { border: none; border-top: 1px solid #ddd; margin: 30px 0; }
     .muted { font-size: 0.95em; color: #555; }
+
+    /* Flashing red dot */
+    .flash-dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: red;
+      margin-right: 6px;
+      animation: flash 1s infinite;
+    }
+    @keyframes flash {
+      0%, 50%, 100% { opacity: 1; }
+      25%, 75% { opacity: 0; }
+    }
+    .response-link {
+      font-weight: bold;
+      color: #c62828;
+      text-decoration: none;
+    }
+    .response-link:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -38,6 +62,8 @@
   </div>
 
   <main>
+    <p><span class="flash-dot"></span><a class="response-link" href="https://red-wow.github.io/hincident/staffupd" target="_blank" rel="noopener noreferrer">NEW (16:30 BST): View Washiez's official response from Magik <small>(Discord Server #staff-announcements)</small></a></p>
+
     <h1>An Explanation of the Hannah (Hannvh1) Situation</h1>
 
     <p>Hello Washiez. By now, most of you are likely aware of the Hannah situation. For those who are not, this is a detailed summary of the events that unfolded.</p>
@@ -93,12 +119,15 @@
     <p>Ultimately, the future of Washiez leadership lies with the executive team. Decisions about Bella’s continued role as CAO and promotion protocols should be made with fairness and transparency in mind.</p>
 
     <h2>Credits</h2>
-    <p>A huge credit to the <a href="https://docs.google.com/document/d/1Vp1N1PvwL46KZ7i8rqQjV725pFeLUwcCTh93h0M84kY/edit?tab=t.0" target="_blank" rel="noopener noreferrer">this document</a> by anonymous_washiez for this source.</p>
+    <p>A huge credit to the <a href="https://docs.google.com/document/d/1Vp1N1PvwL46KZ7i8rqQjV725pFeLUwcCTh93h0M84kY/edit?tab=t.0" target="" rel="noopener noreferrer">this document</a> by anonymous_washiez for this source.</p>
 
-    <hr>
 
-    <p class="muted">This page summarizes the “Hannah situation” based on verified reports and internal sources. Sources may not be correct.</p>
-  </main>
+<hr>
+
+
+<p class="muted">This page summarizes the “Hannah situation” based on verified reports and internal sources. Sources may not be correct.</p>
+</main>
+
 
 </body>
 </html>
