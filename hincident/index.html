@@ -11,7 +11,7 @@
       margin: 0;
       padding: 0;
       color: #111;
-      background: #fff;
+      background: #f9f9f9;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
@@ -21,9 +21,10 @@
       background: #c62828;
       color: #fff;
       text-align: center;
-      padding: 16px;
+      padding: 18px;
       font-weight: bold;
-      font-size: 1.2em;
+      font-size: 1.3em;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     }
 
     header a {
@@ -32,25 +33,17 @@
     }
 
     main {
-      display: flex;
-      flex: 1;
-      max-width: 1200px;
+      max-width: 1000px;
       margin: auto;
       padding: 24px;
-      gap: 24px;
     }
 
-    .content {
-      flex: 3;
-    }
-
-    .sidebar {
-      flex: 1;
-      background: #fafafa;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 16px;
-      max-height: fit-content;
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      padding: 24px;
+      margin-bottom: 24px;
     }
 
     h1, h2 {
@@ -58,22 +51,31 @@
       margin-top: 0;
     }
 
-    p, li {
-      line-height: 1.6;
-    }
-
     ul {
       margin: 0.6em 0;
       padding-left: 20px;
     }
 
+    p, li {
+      line-height: 1.6;
+    }
+
     a {
       color: #c62828;
       text-decoration: none;
+      font-weight: 500;
     }
 
     a:hover {
       text-decoration: underline;
+    }
+
+    .updates p {
+      margin: 10px 0;
+      border-left: 4px solid #c62828;
+      padding-left: 10px;
+      background: #fef6f6;
+      border-radius: 4px;
     }
   </style>
 </head>
@@ -86,28 +88,35 @@
   </header>
 
   <main>
-    <div class="content">
+    <!-- TD;LR Section -->
+    <section class="card">
       <h1>TD;LR</h1>
       <ul>
-        <li>Hannah resigned after not being chosen as COO; WickDr was selected instead.</li>
-        <li>Washiez leadership attempted to stop discussions but made unprofessional announcements.</li>
-        <li>PRD Chief Liam muted multiple members for 24 hours and removed former staff roles.</li>
+        <li>Hannah resigned after being passed over for COO; WickDr was chosen instead.</li>
+        <li>Leadership attempted to suppress discussions but made unprofessional announcements.</li>
+        <li>PRD Chief Liam muted members for 24 hours and removed former staff roles.</li>
         <li>Bella avoided addressing community concerns directly.</li>
         <li>Leadership has been accused of shifting the narrative around the situation.</li>
       </ul>
-    </div>
+    </section>
 
-    <aside class="sidebar">
-      <h2>Updates</h2>
+    <!-- Updates/News Section -->
+    <section class="card updates">
+      <h2>Latest Updates</h2>
       <p>
-         • Washiez hires 4 new corperate interns. Likely to be a replacement.
-      </p>
-      <p>
-        • <a href="https://red-wow.github/hincident/staffupd" target="_blank" rel="noopener noreferrer">
-          Washiez Vice Chairman responded in Discord (#staff-announcements)
+        • <a href="https://docs.google.com/document/d/1i46nh_ZaCZ-RSZNP5-DvNPBa61GK0ILew4Ck23N8pgM/edit?pli=1&tab=t.0" target="_blank" rel="noopener noreferrer">
+          Junior Director Onyx's resignation letter states "Justice for Hannah".
         </a>
       </p>
-    </aside>
+      <p>
+        • Washiez has hired 4 new Corporate Interns, likely as replacements.
+      </p>
+      <p>
+        • <a href="https://discord.com/channels/838853852374499392/982328204008243260/1409923890590777397" target="_blank" rel="noopener noreferrer">
+          Washiez Vice Chairman responded in Discord (#staff-announcements).
+        </a>
+      </p>
+    </section>
   </main>
 
 </body>
