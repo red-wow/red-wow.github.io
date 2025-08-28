@@ -33,9 +33,19 @@
     }
 
     main {
-      max-width: 1000px;
+      max-width: 1200px;
       margin: auto;
       padding: 24px;
+      display: flex;
+      gap: 24px;
+    }
+
+    /* Left column for TD;LR and News */
+    .left-column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
     }
 
     .card {
@@ -43,7 +53,6 @@
       border-radius: 12px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.08);
       padding: 24px;
-      margin-bottom: 24px;
     }
 
     h1, h2 {
@@ -77,6 +86,16 @@
       background: #fef6f6;
       border-radius: 4px;
     }
+
+    /* Right column big box */
+    .right-box {
+      flex: 1;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      padding: 24px;
+      min-height: 100%;
+    }
   </style>
 </head>
 <body>
@@ -88,35 +107,52 @@
   </header>
 
   <main>
-    <!-- TD;LR Section -->
-    <section class="card">
-      <h1>TD;LR</h1>
-      <ul>
-        <li>Hannah resigned after being passed over for COO; WickDr was chosen instead.</li>
-        <li>Leadership attempted to suppress discussions but made unprofessional announcements.</li>
-        <li>PRD Chief Liam muted members for 24 hours and removed former staff roles.</li>
-        <li>Bella avoided addressing community concerns directly.</li>
-        <li>Leadership has been accused of shifting the narrative around the situation.</li>
-      </ul>
-    </section>
+    <!-- Left Column -->
+    <div class="left-column">
+      <!-- TD;LR Section -->
+      <section class="card">
+        <h1>TD;LR</h1>
+        <ul>
+          <li>Hannah resigned after being passed over for COO; WickDr was chosen instead.</li>
+          <li>Leadership attempted to suppress discussions but made unprofessional announcements.</li>
+          <li>PRD Chief Liam muted members for 24 hours and removed former staff roles.</li>
+          <li>Bella avoided addressing community concerns directly.</li>
+          <li>Leadership has been accused of shifting the narrative around the situation.</li>
+        </ul>
+      </section>
 
-    <!-- News Section -->
-    <section class="card updates">
-      <h2>News</h2>
+      <!-- News Section -->
+      <section class="card updates">
+        <h2>News</h2>
+        <p>
+          • <a href="https://docs.google.com/document/d/1i46nh_ZaCZ-RSZNP5-DvNPBa61GK0ILew4Ck23N8pgM/edit?pli=1&tab=t.0" target="_blank" rel="noopener noreferrer">
+            Junior Director Onyx's resignation letter states "Justice for Hannah".
+          </a>
+        </p>
+        <p>
+          • Washiez has hired 4 new Corporate Interns, likely as replacements.
+        </p>
+        <p>
+          • <a href="https://discord.com/channels/838853852374499392/982328204008243260/1409923890590777397" target="_blank" rel="noopener noreferrer">
+            Washiez Vice Chairman responded in Discord (#staff-announcements).
+          </a>
+        </p>
+      </section>
+    </div>
+
+    <!-- Right Column Big Box -->
+    <div class="right-box">
+      <h2>We are battling Censorship</h2>
       <p>
-        • <a href="https://docs.google.com/document/d/1i46nh_ZaCZ-RSZNP5-DvNPBa61GK0ILew4Ck23N8pgM/edit?pli=1&tab=t.0" target="_blank" rel="noopener noreferrer">
-          Junior Director Onyx's resignation letter states "Justice for Hannah".
-        </a>
+		You probably came from Washiez Wiki - or heard of this website from Washiez Wiki. The Bureaucrat of the Wiki, Sparklesgirl1995 has blocked me (WowImRed) for attempting to bring this to the attention of Washiez Wiki. I had permission from an Washiez Wiki Admin, and Washiez Wiki Compliance Head. Before I got blocked, for 3 whole days - for an invalid reason, Sparkles proceeded to delete the policy regarding Hannvh1 and the pages about Hannah. <br><br>
+        
+        The pages about Hannah matched all the guidelines and policies. They only reason why they were deleted, because Sparkles thought it was irrelevant. Now tell me how news is irrelevant. It's not - it's just censorship. <br><br>
+        
+        When I also brought this and tried to appeal the decision a few days ago when the pages were deleted then, Sparkles denied my appeal, more than one - like three times. I was appealing censorship in order to cover vital news and information on Washiez Wiki.
+        <br><br>
+        <b>We are fighting censorship. Support us today. #JusticeForHannah</b>
       </p>
-      <p>
-        • Washiez has hired 4 new Corporate Interns, likely as replacements.
-      </p>
-      <p>
-        • <a href="https://discord.com/channels/838853852374499392/982328204008243260/1409923890590777397" target="_blank" rel="noopener noreferrer">
-          Washiez Vice Chairman responded in Discord (#staff-announcements).
-        </a>
-      </p>
-    </section>
+    </div>
   </main>
 
 </body>
